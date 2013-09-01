@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ILMM</class>
+ <widget class="QMainWindow" name="ILMM">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>320</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>320</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>320</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">HopLa Minecraft</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+centralWidget {
+	background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget#CentralContainer {
+	background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));
+}</string>
+   </property>
+   <widget class="QGroupBox" name="onlineBox">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>190</y>
+      <width>271</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(70, 70, 70);
+border-radius: 10px;
+border-top-right-radius: 0px;
+color: rgb(255,255,255);
+
+
+</string>
+    </property>
+    <property name="title">
+     <string>Tryb Online</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;</string>
+     </property>
+     <property name="text">
+      <string>Login:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="premUsername">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>30</y>
+       <width>211</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255,255,255,30);
+border-radius: 10px;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;</string>
+     </property>
+     <property name="text">
+      <string>Hasło:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="premPassword">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>60</y>
+       <width>211</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255,255,255,30);
+border-radius: 10px;</string>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhHiddenText</set>
+     </property>
+     <property name="text">
+      <string notr="true"/>
+     </property>
+     <property name="placeholderText">
+      <string notr="true"/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="premBtn">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>90</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color: rgb(255,255,255,30);
+border-radius: 10px;
+}
+QPushButton:hover{
+background-color: rgb(255,255,255,50);
+}
+QPushButton:pressed{
+background-color: rgb(255,255,255,50);
+}</string>
+     </property>
+     <property name="text">
+      <string>Odpalaj</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="onlinebtn">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>170</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(70, 70, 70, 255));
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
+color:white;
+}
+
+QPushButton:disabled {
+background-color: rgb(70,70,70);
+color: black;
+}</string>
+    </property>
+    <property name="text">
+     <string>Online</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="offlinebtn">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>170</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(70, 70, 70, 255));
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
+color:white;
+}
+
+QPushButton:disabled {
+background-color: rgb(70,70,70);
+color: black;
+}</string>
+    </property>
+    <property name="text">
+     <string>Offline</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="offlineBox">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>190</y>
+      <width>271</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(70, 70, 70);
+border-radius: 10px;
+border-top-right-radius: 0px;
+color: rgb(255,255,255);
+
+
+</string>
+    </property>
+    <property name="title">
+     <string>Tryb Offline</string>
+    </property>
+    <widget class="QPushButton" name="nonpremBtn">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>90</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color: rgb(255,255,255,30);
+border-radius: 10px;
+}
+QPushButton:pressed{
+background-color: rgb(255,255,255,50);
+}</string>
+     </property>
+     <property name="text">
+      <string>Odpalaj</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="nonPremUsername">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>30</y>
+       <width>211</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255,255,255,30);
+border-radius: 10px;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;</string>
+     </property>
+     <property name="text">
+      <string>Nick:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="downloadBox">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>10</y>
+      <width>421</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+color:white;
+background-color: rgb(70,70,70);
+border-radius: 10px;
+}</string>
+    </property>
+    <property name="title">
+     <string>Stan pobierania</string>
+    </property>
+    <widget class="QProgressBar" name="progressBar">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>401</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="progressBar_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>401</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="fileName">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>401</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white;</string>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>191</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+border-radius: 10px;
+background-color: rgb(70, 70, 70);
+}
+QPushButton{
+background-color: rgba(10, 10,10, 30);
+border-radius: 10px;
+color: rgb(255,255,255);
+background-color: rgb(255,255,255,30);
+}
+QPushButton:pressed{
+background-color: rgb(255,255,255,50);
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;
+color: white;</string>
+     </property>
+     <property name="text">
+      <string>Wybierz wersję Minecraft'a</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>31</y>
+       <width>171</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="currentIndex">
+      <number>-1</number>
+     </property>
+     <property name="maxVisibleItems">
+      <number>10</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="download">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>56</y>
+       <width>171</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="text">
+      <string>Aktualizuj listę wersji gry</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="loadRes">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>171</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="text">
+      <string>Pobierz pliki gry</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Options">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>270</y>
+       <width>171</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Opcje</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>premBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ILMM</receiver>
+   <slot>legitMode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>577</x>
+     <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>nonpremBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ILMM</receiver>
+   <slot>nonlegitMode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>577</x>
+     <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>offlinebtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ILMM</receiver>
+   <slot>switchToOffline()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>605</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>onlinebtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ILMM</receiver>
+   <slot>switchToOnline()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>555</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>download</sender>
+   <signal>clicked()</signal>
+   <receiver>ILMM</receiver>
+   <slot>downloadVersions()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>loadRes</sender>
+   <signal>clicked()</signal>
+   <receiver>ILMM</receiver>
+   <slot>downloadResources()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Options</sender>
+   <signal>clicked()</signal>
+   <receiver>ILMM</receiver>
+   <slot>showOptions()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>291</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>legitMode()</slot>
+  <slot>nonlegitMode()</slot>
+  <slot>switchToOnline()</slot>
+  <slot>switchToOffline()</slot>
+  <slot>downloadVersions()</slot>
+  <slot>loadVersions()</slot>
+  <slot>downloadFiles()</slot>
+  <slot>downloadResources()</slot>
+  <slot>showOptions()</slot>
+ </slots>
+</ui>
